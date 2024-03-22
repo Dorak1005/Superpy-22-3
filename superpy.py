@@ -218,6 +218,9 @@ def main():
     elif args.command == 'advance-time':  # Handle advance-time command
         console = Console()  # Define the console object
         advance_time(args, console)  # Pass console as an argument
+    elif args.command == 'visualize': # Handle visualize command
+            console = Console() # Define the console object
+            visualize_data(args.console) # Pass console as an argument
     else:
         print(f"Invalid command: {args.command}")
 
