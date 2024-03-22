@@ -1,0 +1,49 @@
+SuperPy - Supermarket Inventory Management Tool
+
+This tool, SuperPy, is designed to help supermarkets keep track of their inventory through a command-line interface. It allows for buying and selling products, generating various reports, advancing time, and visualizing statistics.
+
+Commands:
+- `buy`: Buy a product and add it to the inventory.
+  Example: `python superpy.py buy --product-name Orange --price 0.8 --expiration-date 2023-01-05`
+
+- `sell`: Sell a product from the inventory.
+  Example: `python superpy.py sell --product-name Orange --price 2`
+
+- `report inventory`: Display the current or previous day's inventory.
+Install first Matplotlib with the prompt : pip install matplotlib
+After that you can type prompts as below:
+  Examples:
+    - `python superpy.py report inventory --now`
+    - `python superpy.py report inventory --yesterday`
+
+- `report revenue`: Generate revenue reports for today, yesterday, or a specific date.
+  Examples:
+    - `python superpy.py report revenue --today`
+    - `python superpy.py report revenue --yesterday`
+    - `python superpy.py report revenue --date 2019-12`
+
+- `report profit`: Generate profit reports for today.
+  Example: `python superpy.py report profit --today`
+
+- `advance-time`: Advance the system date by a specified number of days.
+  Example: `python superpy.py advance-time 2`
+
+- `visualize`: Visualize statistics using Matplotlib.
+  Example: `python superpy.py visualize`
+
+Options and Arguments:
+- `--product-name`: Name of the product (required for buy and sell commands).
+- `--price`: Price of the product (required for buy and sell commands).
+- `--expiration-date`: Expiration date of the product (required for the buy command).
+- `--now`: Display the current inventory or report for the current day.
+- `--yesterday`: Display the inventory or report for the previous day.
+- `--today`: Generate reports for the current day.
+- `--date`: Specify a date for generating reports.
+- `<days>`: Number of days to advance the system date.
+
+For more details on each command and option, use the `--help` flag with the corresponding command.
+
+Examples:
+  - `python superpy.py buy --product-name Apple --price 1.25 --expiration-date 2023-01-09`
+  - `python superpy.py report inventory --now`
+  - `python superpy.py advance-time 2`

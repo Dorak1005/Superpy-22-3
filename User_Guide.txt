@@ -1,0 +1,44 @@
+SuperPy - Supermarket Inventory Management Tool
+
+First install the following library:
+Install first Matplotlib with the prompt : pip install matplotlib
+
+Usage:
+  python superpy.py buy --product-name <product_name> --price <price> --expiration-date <expiration_date>
+  python superpy.py sell --product-name <product_name> --price <price>
+  python superpy.py report inventory (--now | --yesterday)
+  python superpy.py report revenue (--today | --yesterday | --date <date>)
+  python superpy.py report profit --today
+  python superpy.py visualize
+
+Options:
+  buy                 Buy a product and add it to the inventory.
+  sell                Sell a product from the inventory.
+  report inventory   Display the current or previous day's inventory.
+  report revenue     Generate revenue reports for today, yesterday, or a specific date.
+  report profit      Generate profit reports for today.
+  advance-time       Advance the system date by a specified number of days.
+  visualize          Visualize statistics using Matplotlib.
+
+Arguments:
+  --product-name     Name of the product (required for buy and sell commands).
+  --price            Price of the product (required for buy and sell commands).
+  --expiration-date  Expiration date of the product (required for the buy command).
+  --now              Display the current inventory or report for the current day.
+  --yesterday        Display the inventory or report for the previous day.
+  --today            Generate reports for the current day.
+  --date             Specify a date for generating reports.
+  <days>             Number of days to advance the system date.
+
+Installation of Required Modules:
+  Before running SuperPy, make sure to install the required Python modules using the following commands:
+  pip install rich
+  pip install matplotlib
+
+Examples:
+  python superpy.py buy --product-name Orange --price 0.8 --expiration-date 2023-01-05
+  python superpy.py sell --product-name Orange --price 2
+  python superpy.py report inventory --now
+  python superpy.py report revenue --today
+  python superpy.py advance-time 2
+  python superpy.py visualize
